@@ -1,38 +1,119 @@
+/* Main App Styling */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centers content vertically */
+  background: linear-gradient(135deg, #e8e7f6 0%, #f4f4f9 100%); /* Subtle background gradient */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for the Login Form */
+.Login {
+  background-color: #ffffff; /* Pure white background for contrast */
+  padding: 40px; /* Increased padding for spacious feel */
+  border-radius: 20px; /* Smoother border radius */
+  width: 360px; /* Slightly wider form */
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Hover effect for the Login form */
+.Login:hover {
+  transform: translateY(-3px) scale(1.02); /* Subtle lift and scale */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Title Styling */
+.Login h1 {
+  font-size: 28px; /* Slightly larger font size */
+  margin-bottom: 30px; /* More space below the title */
+  color: #333;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced text shadow */
+}
+
+/* Styling for the form fields */
+.Login form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Login label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 15px; /* Slightly larger font size */
+  text-align: left;
+}
+
+.Login input {
+  padding: 15px; /* Increased padding for larger fields */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Smoother border radius */
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+}
+
+.Login input:focus {
+  border-color: #61dafb;
+  outline: none;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3); /* More prominent glow effect */
+}
+
+/* Button Styling */
+.Login button {
+  padding: 15px; /* Increased padding for a larger button */
+  background-color: #61dafb;
+  border: none;
+  border-radius: 10px; /* Smoother border radius */
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
 }
 
-.App-link {
-  color: #61dafb;
+.Login button:hover {
+  background-color: #21a1f1;
+  transform: translateY(-3px); /* More pronounced upward movement */
+  box-shadow: 0 8px 15px rgba(33, 161, 241, 0.3); /* Button shadow on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Login button:active {
+  transform: translateY(0);
+  background-color: #1b8ac7;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #e74c3c; /* Red color for errors */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 600px) {
+  .Login {
+    width: 90%;
+    padding: 25px; /* Adjusted padding */
   }
-  to {
-    transform: rotate(360deg);
+
+  .Login h1 {
+    font-size: 24px;
+  }
+
+  .Login input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .Login button {
+    font-size: 16px;
+    padding: 12px;
   }
 }

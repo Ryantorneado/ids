@@ -1,0 +1,114 @@
+/* General styling for the signup form */
+.Signup {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.Signup h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form elements styling */
+.Signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Signup label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.Signup input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.Signup input:focus {
+    border-color: #61dafb;
+    outline: none;
+    box-shadow: 0 0 8px rgba(97, 218, 251, 0.3);
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button styling */
+.Signup button {
+    padding: 12px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Signup button:hover {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
+
+.Signup button:active {
+    background-color: #1b8ac7;
+    transform: translateY(0);
+}
+
+/* Sign in link styling */
+.Signup p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Signup a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Signup a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .Signup {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .Signup h1 {
+        font-size: 24px;
+    }
+
+    .Signup input {
+        font-size: 14px;
+    }
+
+    .Signup button {
+        font-size: 16px;
+    }
+}
